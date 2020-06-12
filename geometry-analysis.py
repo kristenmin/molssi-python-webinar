@@ -1,3 +1,7 @@
+"""
+this module has functions associated wit hanalyzing the geometry of a molecule.
+"""
+
 # open as txt, copy and paste the code from the notebook, and then name py to have it recognize the python code!
 
 # to run in terminal, python geometry-analysis.py data/water.xyz
