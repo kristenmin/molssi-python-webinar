@@ -29,6 +29,14 @@ def bond_check(atom_distance, min_length = 0, max_length = 1.5):
     else: 
         return False
 
+# opens and processes xyz file -- takes an xyz file as a parameter and returns the symbols and coordinates. 
+def open_xyz(filename):
+    xyz_file = numpy.genfromtxt(fname = filename, skip_header = 2, dtype = 'unicode')
+    symbols = xyz_file[:, 0]
+    coord = (xyz_file[:, 1:])
+    coord = coord.astype(numpy.float)
+    return symbols, coord
+
 #EVERYTHING BELOW: MAIN PART OF THE CODE 
 if __name__ == "__main__": #syntax telling python that it is the main code
 
